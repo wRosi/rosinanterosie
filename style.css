@@ -1,0 +1,665 @@
+:root{
+  --bg: #f5f5f5;
+  --text: #b70202;
+  --muted: #c49292;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: "Courier Prime", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 13px;
+  line-height: 1.55;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+a{ color: var(--text); }
+
+.page{
+  min-height: 100vh;
+  padding: 22px 26px 34px;
+}
+
+/* =========================
+   PORTFOLIO LAYOUT (2 columns)
+   ========================= */
+.portfolio-page .layout{
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* LEFT NAV */
+.side{
+  position: relative;
+  padding-top: 6px;
+  min-height: 100vh;
+}
+
+.side-name{
+  font-size: 13px;
+  color: var(--text);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 80px;
+}
+.side-name:hover{ opacity: .6; }
+
+.side-links{
+  display: grid;
+  gap: 10px;
+}
+.side a{
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+}
+.side a:hover{ opacity: .6; }
+
+.portfolio-page .side-links a.is-active{
+  opacity: 1;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* RIGHT STAGE / VIEWS */
+.stage{
+  position: relative;
+  min-height: 80vh;
+}
+
+.view{ display: none; }
+.view.is-active{ display: block; }
+
+/* PANEL (About/Zero/Contact baseline) */
+.panel{
+  padding-top: 6vh;
+  max-width: 920px;
+}
+.panel-title{
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: normal;
+}
+.panel-sub{
+  margin: 0 0 28px;
+  color: var(--muted);
+}
+.panel-text{
+  margin-top: 28px;
+  max-width: 560px;
+}
+.panel-text p{
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+/* =========================
+   LANDING (legacy)
+   ========================= */
+.landing-wrap{
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+  padding: 8vh 24px;
+}
+
+.landing-name{
+  margin: 0;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: .02em;
+  text-align: center;
+}
+
+.landing-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.landing-img{
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  display: block;
+  background: rgba(255,255,255,.08);
+  cursor: pointer;
+}
+
+.landing-foot{ text-align: center; }
+
+.landing-link{
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  font-size: 13px;
+  letter-spacing: .03em;
+}
+.landing-link:hover{ opacity: .6; }
+
+/* =========================
+   EDITORIAL
+   ========================= */
+.portfolio-page .editorial-project{
+  padding-top: 6vh;
+  max-width: 500px;
+}
+
+.portfolio-page .editorial-project + .editorial-project{
+  margin-top: 90px;
+}
+
+.portfolio-page .editorial-project-title{
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0 0 12px 0;
+}
+
+.portfolio-page .editorial-project-meta{
+  font-size: 10px;
+  color: var(--muted);
+  margin: 0 0 12px 0;
+}
+
+.portfolio-page .editorial-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.portfolio-page .editorial-grid img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.portfolio-page .editorial-description{
+  margin-top: 28px;
+}
+
+.portfolio-page .editorial-description p{
+  font-size: 10px;
+  margin: 0 0 18px 0;
+  line-height: 1.2;
+}
+
+.portfolio-page .project-3 .editorial-grid{
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.credits{
+  font-size: 10px;
+  line-height: 1.2;
+  color: #c9a3a3;
+}
+.credits p{ margin: 0; }
+
+@media (max-width: 900px){
+  .portfolio-page .editorial-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+  .portfolio-page .editorial-grid{ grid-template-columns: 1fr; }
+}
+
+/* =========================
+   PROJECT PAGE GRID
+   ========================= */
+.portfolio-page .project-grid{
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  max-width: 720px;
+}
+
+.portfolio-page .project-grid img{
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+@media (max-width: 900px){
+  .portfolio-page .project-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px){
+  .portfolio-page .project-grid{ grid-template-columns: 1fr; }
+}
+
+/* =========================
+   GALLERY (Floating Squares)
+   ========================= */
+.portfolio-page #view-gallery{
+  padding-top: 6vh;
+}
+
+.portfolio-page .gallery-messy{
+  position: relative;
+  height: 270vh;
+  max-width: 900px;
+}
+
+.portfolio-page .gallery-messy .gitem{
+  position: absolute;
+  display: block;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.portfolio-page .gallery-messy .gitem img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.portfolio-page .gallery-messy .gitem::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,.42);
+  opacity:0;
+  transition:.18s ease;
+}
+
+.portfolio-page .gallery-messy .gcap{
+  position:absolute;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  color:#fff;
+  font-size:12px;
+  line-height:1.35;
+  opacity:0;
+  transform: translateY(4px);
+  transition:.18s ease;
+}
+
+.portfolio-page .gallery-messy .gitem:hover::after{ opacity:1; }
+.portfolio-page .gallery-messy .gitem:hover .gcap{
+  opacity:1;
+  transform: translateY(0);
+}
+
+/* gallery positions */
+.portfolio-page .gallery-messy .gitem:nth-child(1){ width: 380px; top: 5vh; left: 52%; }
+.portfolio-page .gallery-messy .gitem:nth-child(2){ width: 180px; top: 67vh; left: 66%; }
+.portfolio-page .gallery-messy .gitem:nth-child(3){ width: 200px; top: 110vh; left: 38%; }
+.portfolio-page .gallery-messy .gitem:nth-child(4){ width: 110px; top: 110vh; left: 64%; }
+.portfolio-page .gallery-messy .gitem:nth-child(5){ width: 420px; top: 154vh; left: 58%; }
+.portfolio-page .gallery-messy .gitem:nth-child(6){ width: 230px; top: 230vh; left: 48%; }
+
+@media (max-width: 900px){
+  .portfolio-page .gallery-messy{
+    position: static;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0,1fr));
+    gap: 14px;
+    max-width: 760px;
+  }
+  .portfolio-page .gallery-messy .gitem{
+    position: relative;
+    width: auto !important;
+    top: auto !important;
+    left: auto !important;
+  }
+}
+
+@media (max-width: 600px){
+  .portfolio-page .gallery-messy{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   RESPONSIVE: overall layout stack
+   ========================= */
+@media (max-width: 720px){
+  .portfolio-page .layout{
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .panel{ padding-top: 3vh; }
+}
+
+/* =========================
+   PROJECT PAGES
+   ========================= */
+.project-page .panel-text{
+  font-size:10px;
+  line-height:1.2;
+}
+
+.project-two{
+  display:grid;
+  grid-template-columns:auto auto;
+  gap:10px;
+  justify-content:center;
+}
+
+.project-two img{
+  height:78vh;
+  width:auto;
+  display:block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* =========================================
+   GLOBAL SPIRAL CURSOR
+   ========================================= */
+body.cursor-active,
+body.cursor-active a,
+body.cursor-active button,
+body.cursor-active img,
+body.cursor-active [role="button"]{
+  cursor: none !important;
+}
+
+.spiral-cursor{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  z-index: 999999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity .08s linear;
+}
+
+body.cursor-active .spiral-cursor{
+  opacity: 1;
+}
+
+.spiral-cursor svg{
+  width: 100%;
+  height: 100%;
+  stroke: #b70202;
+  stroke-width: 5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  animation: spiralRotate 1s linear infinite;
+}
+
+.spiral-cursor svg path{
+  stroke: inherit;
+}
+
+@keyframes spiralRotate{
+  from{ transform: rotate(0deg); }
+  to{ transform: rotate(360deg); }
+}
+
+#view-about .panel-text p{
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+/* =========================================
+   ALETHEA PROJECT PAGE
+   ========================================= */
+.project-wrap{
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 50px;
+}
+
+.project-still{
+  position: relative;
+  max-width: 900px;
+  margin-top: 30px;
+  height: 1400px;
+}
+
+.still-img{
+  position: absolute;
+  height: auto;
+  display: block;
+}
+
+.size-xl{ width: 520px; }
+.size-l{ width: 380px; }
+.size-m{ width: 260px; }
+.size-s{ width: 160px; }
+
+.project-still img:nth-child(1){
+  top: 0;
+  left: 0;
+}
+
+.project-still img:nth-child(2){
+  top: 360px;
+  left: 540px;
+}
+
+.project-still img:nth-child(3){
+  top: 500px;
+  left: 540px;
+}
+
+.project-still img:nth-child(4){
+  top: 780px;
+  left: 540px;
+}
+
+@media (max-width:900px){
+  .project-two{
+    grid-template-columns:1fr;
+  }
+
+  .project-two img{
+    width:100%;
+    height:auto;
+  }
+
+  .project-still{
+    position:static;
+    height:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:14px;
+  }
+
+  .still-img{
+    position:relative;
+    width:100% !important;
+  }
+}
+
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
+.about-layout{
+  display: grid;
+  grid-template-columns: 220px minmax(0, 560px);
+  gap: 36px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.about-profile{
+  margin: 0;
+}
+
+.about-profile img{
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.about-text{
+  margin-top: 0;
+}
+
+.about-text p{
+  font-size: 10px;
+  line-height: 1.2;
+  margin: 0 0 14px;
+}
+
+@media (max-width: 900px){
+  .about-layout{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .about-profile{
+    max-width: 300px;
+  }
+}
+
+#view-about .panel-text{
+  margin-left: 80px;
+}
+
+/* =========================================
+   LANDING PAGE — FULLSCREEN IMAGE
+   ========================================= */
+.landing-page{
+  margin: 0;
+  overflow: hidden;
+}
+
+.landing-full{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.landing-bg{
+  position: absolute;
+  inset: 0;
+  background-image: url("images/landing/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transform: scale(1.01);
+}
+
+.landing-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(245,245,245,0.34);
+  background:
+    linear-gradient(rgba(0,0,0,0.02) 1px, transparent 25px),
+    linear-gradient(90deg, rgba(0,0,0,0.02) 1px, transparent 36px),
+    rgba(245,245,245,0.42);
+  background-size: 800px 400px;
+}
+
+.landing-top{
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 24px 28px;
+}
+
+.landing-name,
+.landing-portfolio{
+  color: var(--text);
+  text-decoration: none;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.landing-name:hover,
+.landing-portfolio:hover{
+  opacity: .6;
+}
+
+.landing-quote{
+  position: absolute;
+  z-index: 3;
+  font-size: 10px;
+  line-height: 1.45;
+  color: rgba(183, 2, 2, 0.68);
+  letter-spacing: 0.02em;
+  max-width: 170px;
+}
+
+.q1{
+  top: 34%;
+  left: 18%;
+}
+
+.q2{
+  top: 63%;
+  left: 73%;
+}
+
+.landing-note{
+  position: absolute;
+  z-index: 3;
+  left: 28px;
+  bottom: 24px;
+  font-size: 10px;
+  line-height: 1.45;
+  color: rgba(183, 2, 2, 0.72);
+  letter-spacing: 0.02em;
+}
+
+.landing-rilke{
+  position:absolute;
+  right:28px;
+  bottom:24px;
+  font-size:9px;
+  line-height:1.4;
+  color:rgba(183,2,2,.6);
+  letter-spacing:.02em;
+  text-align:right;
+}
+
+.landing-page::before{
+  content: none !important;
+}
+
+@media (max-width: 900px){
+  .landing-top{
+    padding: 20px 18px;
+  }
+
+  .landing-quote{
+    font-size: 9px;
+    max-width: 130px;
+  }
+
+  .q1{
+    top: 30%;
+    left: 10%;
+  }
+
+  .q2{
+    top: 68%;
+    left: 56%;
+  }
+
+  .landing-note{
+    left: 18px;
+    bottom: 18px;
+    font-size: 9px;
+  }
+}
+
+.nb-empty{
+  min-height: 1px;
+}

@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aléthea — Zhaoyu Wang</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .al-page{
+      min-height: 100vh;
+      padding: 22px 26px 80px;
+    }
+
+    .al-topbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 60px;
+      font-size: 13px;
+    }
+
+    .al-back{
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .al-back:hover{
+      opacity: .6;
+    }
+
+    .al-flow{
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    .al-intro{
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 120px;
+    }
+
+    .al-title{
+      margin: 0;
+      font-size: clamp(34px, 7vw, 88px);
+      font-weight: normal;
+      line-height: .92;
+      letter-spacing: -0.02em;
+    }
+
+    .al-lead{
+      max-width: 320px;
+      margin-left: auto;
+      font-size: 10px;
+      line-height: 1.35;
+      color: var(--muted); 
+    }
+
+    .al-section{
+      margin-bottom: 140px;
+    }
+
+    .al-image-wrap{
+      position: relative;
+    }
+
+    .al-image-wrap img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .w-1{ max-width: 300px; }
+    .w-2{ max-width: 460px; }
+    .w-3{ max-width: 720px; }
+    .w-4{ max-width: 980px; }
+
+    .ml-a{ margin-left: auto; }
+    .ml-0{ margin-left: 0; }
+    .ml-1{ margin-left: 8%; }
+    .ml-2{ margin-left: 18%; }
+    .ml-3{ margin-left: 32%; }
+
+    .mt-1{ margin-top: 24px; }
+    .mt-2{ margin-top: 60px; }
+    .mt-3{ margin-top: 110px; }
+
+    .al-text{
+      max-width: 280px;
+      font-size: 10px;
+      line-height: 1.35;
+    }
+
+    .al-text p{
+      margin: 0 0 14px;
+    }
+
+    .al-pair{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      align-items: start;
+      max-width: 980px;
+    }
+
+    .al-pair img{
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .al-break{
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .al-break-reverse{
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .al-quote{
+      max-width: 240px;
+      font-size: 10px;
+      line-height: 1.45;
+      letter-spacing: .02em;
+      color: var(--text);
+    }
+
+    .al-quote p{
+      margin: 0;
+    }
+
+    .al-end{
+      padding-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: end;
+    }
+
+    .al-credits{
+      font-size: 10px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+
+    .al-credits p{
+      margin: 0;
+    }
+
+    @media (max-width: 900px){
+      .al-intro,
+      .al-break,
+      .al-break-reverse,
+      .al-end{
+        grid-template-columns: 1fr;
+      }
+
+      .al-pair{
+        grid-template-columns: 1fr;
+      }
+
+      .al-lead,
+      .al-text,
+      .al-quote{
+        max-width: none;
+        margin-left: 0;
+      }
+
+      .ml-a,
+      .ml-0,
+      .ml-1,
+      .ml-2,
+      .ml-3{
+        margin-left: 0;
+      }
+
+      .al-section{
+        margin-bottom: 90px;
+      }
+
+      .al-topbar{
+        margin-bottom: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+  <div class="al-page">
+
+    <header class="al-topbar">
+      <a class="al-back" href="portfolio.html#doc">Doc.</a>
+      <div></div>
+    </header>
+
+    <main class="al-flow">
+
+      <section class="al-intro">
+        <h1 class="al-title">Aléthea</h1>
+
+        <div class="al-lead">
+          Aléthea captures moments of quiet coexistence, where human presence, landscape, and other forms of life occupy the same space without hierarchy. Light and stillness shape perception, revealing the subtle dialogues between body, terrain, and the wider world.
+        </div>
+      </section>
+
+      <section class="al-section">
+        <div class="al-image-wrap w-4 ml-0">
+          <img src="images/gallery/aléthea/a1.jpg" alt="Aléthea image 1" />
+        </div>
+      </section>
+
+      <section class="al-section al-break">
+        <div class="al-quote ml-1">
+          <p>
+            Sweet is the whisper of the pine<br>
+            beside the spring, goatherd,<br>
+            and sweet <br>
+            the sound you make <br>
+            upon the pipes.
+          </p>
+        </div>
+
+        <div class="al-image-wrap w-3 ml-a">
+          <img src="images/gallery/aléthea/a2.jpg" alt="Aléthea image 2" />
+        </div>
+      </section>
+
+      <section class="al-section">
+        <div class="al-pair ml-2">
+          <img src="images/gallery/aléthea/a3.jpg" alt="Aléthea image 3" />
+          <img src="images/gallery/aléthea/a4.jpg" alt="Aléthea image 4" />
+        </div>
+      </section>
+
+      <section class="al-section al-break-reverse">
+        <div class="al-image-wrap w-2 ml-0">
+          <img src="images/gallery/aléthea/a5.jpg" alt="Aléthea image 5" />
+        </div>
+
+        <div class="al-quote mt-2">
+          <p>
+            Here the ground is soft<br>
+            with fallen leaves,<br>
+            and the shade<br>
+            of elm and poplar<br> 
+            trembles<br> 
+            in the quiet wind.
+          </p>
+        </div>
+      </section>
+
+      <section class="al-section">
+        <div class="al-image-wrap w-3 ml-3">
+          <img src="images/gallery/aléthea/a6.jpg" alt="Aléthea image 6" />
+        </div>
+
+        <div class="al-quote mt-2 ml-1">
+          <p>
+            Nearby the water flows<br>  
+            clear from the rock,<br>
+            cool even<br>  
+            in the heat of noon.
+          </p>
+        </div>
+      </section>
+
+      <section class="al-section">
+        <div class="al-image-wrap w-4 ml-a">
+          <img src="images/gallery/aléthea/a7.jpg" alt="Aléthea image 7" />
+        </div>
+
+        <div class="al-image-wrap w-1 ml-1 mt-2">
+          <img src="images/gallery/aléthea/a8.jpg" alt="Aléthea image 8" />
+        </div>
+      </section>
+
+      <section class="al-section">
+        <div class="al-break">
+          <div class="al-quote">
+            <p>
+              The bees hum<br>  
+              among the flowers,<br>
+              and the cicadas sing<br> 
+              from the trees.
+            </p>
+          </div>
+
+          <div class="al-image-wrap w-3 ml-a">
+            <img src="images/gallery/aléthea/a9.jpg" alt="Aléthea image 9" />
+          </div>
+        </div>
+      </section>
+
+      <section class="al-section">
+        <div class="al-image-wrap w-2 ml-2">
+          <img src="images/gallery/aléthea/a10.jpg" alt="Aléthea image 10" />
+        </div>
+
+        <div class="al-quote mt-2 ml-a">
+          <p>
+            Everything here breathes<br> 
+            in gentle stillness —<br>
+            earth,<br>  
+            water,<br>  
+            and air<br>  
+            together.
+          </p>
+        </div>
+      </section>
+
+      <footer class="al-end">
+        <div class="al-credits">
+          <p>Location: Switzerland</p>
+          <p>Year: 2023</p>
+          <p>Quote excerpted from <em>Idylls</em> by Theocritus</p>
+        </div>
+
+        <a class="al-back" href="portfolio.html#doc">Back</a>
+      </footer>
+
+    </main>
+  </div>
+
+  <div class="spiral-cursor" id="spiralCursor"></div>
+  <script src="cursor.js" defer></script>
+</body>
+</html>

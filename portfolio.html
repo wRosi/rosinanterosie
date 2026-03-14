@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Zhaoyu Wang</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+  
+</head>
+
+<body>
+  <div class="page portfolio-page">
+    <!-- 默认两栏（左 + 右）；点 Gallery 才加 is-gallery 变三栏 -->
+    <div class="layout" id="layout">
+
+      <!-- LEFT -->
+      <aside class="side">
+        <a class="side-name" href="index.html">Zhaoyu Wang</a>
+
+        <div class="side-block">
+          <nav class="side-links" id="mainNav" aria-label="Portfolio navigation">
+            <!-- ✅ 1) Gallery 改为 Doc. -->
+            <a href="#" data-view="doc">Doc.</a>
+            <!-- ✅ 2) Doc. 下面新增 Figure -->
+            <a href="#" data-view="figure">Figure</a>
+            <a href="#" data-view="editorial">Selected Editorial</a>
+            <a href="#" data-view="zero">000</a>
+            <a href="#" data-view="contact">Contact</a>
+          </nav>
+        </div>
+        
+      </aside>
+
+      <!-- RIGHT -->
+      <main class="stage">
+
+        <!-- ABOUT -->
+        <section class="view is-active" id="view-about">
+          <div class="panel">
+            <h2 class="panel-title">About</h2>
+            <p class="panel-sub">Artist statement / bio</p>
+
+            <div class="about-layout">
+  <figure class="about-profile">
+    <img src="images/about/profile.png" alt="Portrait of Zhaoyu Wang">
+  </figure>
+
+  <div class="panel-text about-text">
+    <p>Zhaoyu Wang (b. 1996, Xi’an, China) is a photographer, stylist, and creative director based in Toronto. She was originally trained in stomatology and economics before pursuing studies in fashion design in London. This interdisciplinary background informs a distinctly analytical approach to image-making, bridging rational structure and visual narrative. Her work is characterized by a calm, declarative visual language that treats photography as a method of observation rather than spectacle, examining the relationship between individuals, space, and perception. Having lived and worked across different regions, Wang is particularly attentive to the influence of geography and environment, often exploring how individuals inhabit and are shaped by specific social and spatial contexts.</p>
+
+    <p>Wang regards photography as a descriptive medium whose two-dimensional surface records a fragment of three-dimensional space. This fragment mirrors the condition of objects within four-dimensional reality, where matter and time coexist only momentarily. The act of photographing is instantaneous, yet images accumulate across time, forming a perceptual field that sits between the flatness of the photograph and the temporal continuity of lived experience. In this sense, the photographic image is never neutral but constructed; every narrative within it reflects the subjectivity of the gaze.</p>
+
+    <p>In her fashion-related work, Wang situates clothing within the conditions of everyday life. Emphasizing the personal dimension of style, she works with the individuality of her subjects rather than imposing uniform aesthetics. Real environments and fragments of daily experience become the stage on which garments appear with quiet yet unconventional tension, allowing fashion to emerge not as spectacle but as an extension of personal presence.</p>
+
+    <p>Her photographic projects span documentary, fine art, and editorial practices. Her work has been published in magazines including Selin, Mob Journal, and Enzomnia. Wang is also a member of the creative team at 11MAKE Vision, where she works as a creative director and stylist, responsible for developing the brand’s visual identity and media content.</p>
+  </div>
+</div>
+          </div>
+        </section>
+
+        <!-- DOC. (原 GALLERY 内容不改，只是换了 id/aria-label) -->
+        <section class="view" id="view-doc" aria-label="Doc.">
+          <div class="gallery-messy">
+
+            <a class="gitem size-xl tall" href="project-noir-et-blanc.html">
+              <img src="images/gallery/noir-et-blanc/n1.jpg" alt="Noir et Blanc">
+              <div class="gcap">Noir et Blanc</div>
+            </a>
+
+            <a class="gitem size-m" href="project-aléthea.html">
+              <img src="images/gallery/aléthea/a1.jpg" alt="Aléthea">
+              <div class="gcap">Aléthea</div>
+            </a>
+
+            <a class="gitem size-xl wide" href="project-lake-ontario-record.html">
+              <img src="images/gallery/lake-ontario-record/1.jpg" alt="Lake Ontario Record">
+              <div class="gcap">Lake Ontario Record</div>
+            </a>
+
+            <a class="gitem size-l wide" href="project-city-roaming-01.html">
+              <img src="images/gallery/city-roaming-01/c1-1.jpg" alt="City Roaming 01">
+              <div class="gcap">City Roaming 01</div>
+            </a>
+
+            <a class="gitem size-s" href="project-qaiga.html">
+              <img src="images/gallery/qaiga/i1.jpg" alt="I Arrived at Your Hometown in the Quiet After Its Golden Age">
+              <div class="gcap">I Arrived at Your Hometown in the Quiet After Its Golden Age</div>
+            </a>
+
+            <a class="gitem size-s" href="project-between-tides.html">
+              <img src="images/gallery/between-tides/1.jpg" alt="Between Tides">
+              <div class="gcap">Between Tides</div>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- FIGURE（同 Doc. 排版：右侧不规则排列；图片暂不可点击） -->
+        <section class="view" id="view-figure" aria-label="Figure">
+          <div class="gallery-messy">
+
+            <!-- 占位：把 src/alt/cap 换成你的 Figure 图片即可 -->
+            <div class="gitem size-xl tall">
+              <img src="images/gallery/figure/f1.jpg" alt="Figure 1">
+              <div class="gcap">Figure 1</div>
+            </div>
+
+            <div class="gitem size-m">
+              <img src="images/gallery/figure/f2.jpg" alt="Figure 2">
+              <div class="gcap">Figure 2</div>
+            </div>
+
+            <div class="gitem size-l wide">
+              <img src="images/gallery/figure/f3.jpg" alt="Figure 3">
+              <div class="gcap">Figure 3</div>
+            </div>
+
+            <div class="gitem size-l">
+              <img src="images/gallery/figure/f4.jpg" alt="Figure 4">
+              <div class="gcap">Figure 4</div>
+            </div>
+
+            <div class="gitem size-s">
+              <img src="images/gallery/figure/f5.jpg" alt="Figure 5">
+              <div class="gcap">Figure 5</div>
+            </div>
+
+            <div class="gitem size-m tall">
+              <img src="images/gallery/figure/f6.jpg" alt="Figure 6">
+              <div class="gcap">Figure 6</div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SELECTED EDITORIAL -->
+        <section class="view" id="view-editorial">
+        <!-- Project 1 -->
+        <div class="editorial-project">
+
+        <h2 class="editorial-project-title">
+        OUT OF ORDER
+        </h2>
+   
+         <div class="editorial-project-meta">
+        ENZOMNIA WINTER ISSUE 47 - 2026
+         </div>
+
+         <div class="editorial-grid">
+      <img src="images/editorial/ed-01-01.jpg" alt="">
+      <img src="images/editorial/ed-01-02.jpg" alt="">
+      <img src="images/editorial/ed-01-03.jpg" alt="">
+      <img src="images/editorial/ed-01-04.jpg" alt="">
+      <img src="images/editorial/ed-01-05.jpg" alt="">
+      <img src="images/editorial/ed-01-06.jpg" alt="">
+       </div>
+
+         <div class="editorial-description">
+      <p>
+        Out of Order is a photographic exploration of controlled disruption. 
+        Aware of the gaze, it resists alignment. Posture tilts. Tension replaces ease. Nothing corrects itself. Within vacant interiors, garments detach from function and stand autonomous—no permission, no apology. A composed disturbance persists: order is not broken, only withheld.
+      </p>
+        </div>
+
+    <div class="credits">
+  <p>directed by zhaoyu wang</p>
+  <p>lensed by anxian liu</p>
+  <p>styling zhaoyu wang</p>
+  <p>hair/makeup 陆陆</p>
+  <p>photo assistant chia chan & mengyuan zhou</p>
+  </div>
+
+  </div>
+  <!-- Project 2 -->
+    <div class="editorial-project">
+
+    <h2 class="editorial-project-title">
+    Echoes in the Ruins
+    </h2>
+
+    <div class="editorial-project-meta">
+    17:23 MAGAZINE No.109 - 2025
+    </div>
+
+    <div class="editorial-grid">
+      <img src="images/editorial/ed-02-01.jpg" alt="">
+      <img src="images/editorial/ed-02-02.jpg" alt="">
+      <img src="images/editorial/ed-02-03.jpg" alt="">
+      <img src="images/editorial/ed-02-04.jpg" alt="">
+      <img src="images/editorial/ed-02-05.jpg" alt="">
+      <img src="images/editorial/ed-02-06.jpg" alt="">
+    </div>
+
+    <div class="editorial-description">
+      
+    </div>
+
+    <div class="credits">
+  <p>directed/lensed by zhaoyu wang</p>
+  <p>produced by hongji weng</p>
+  <p>styling/fashion zhaoyu wang & kay crerar</p>
+  <p>hair/makeup cecilia xu</p>
+  </div>
+
+  </div>
+  <!-- Project 3 -->
+  <div class="editorial-project project-3">
+
+    <h2 class="editorial-project-title">
+    YAOCHENG
+    </h2>
+
+    <div class="editorial-project-meta">
+    MOB JOURNAL | VOLUME FIFTY EIGHT | ISSUE #01 - 2025
+    </div>
+
+    <div class="editorial-description">
+      <p>
+        This body of work emerged from an encounter between two women navigating displacement in a new city. During her first months in Toronto, Zhaoyu Wang met Yaocheng Xia, a medical student whose quiet demeanor holds an unexpectedly vivid inner world. Yaocheng had never stood before the camera as a model, nor had she been trained in how to compose herself under the gaze.
+      </p>
+      
+    </div>
+
+    <div class="editorial-grid">
+      <img src="images/editorial/ed-03-01.jpg" alt="">
+      <img src="images/editorial/ed-03-02.jpg" alt="">
+      <img src="images/editorial/ed-03-03.jpg" alt="">
+      <img src="images/editorial/ed-03-04.jpg" alt="">
+      <img src="images/editorial/ed-03-05.jpg" alt="">
+      <img src="images/editorial/ed-03-06.jpg" alt="">
+    </div>
+
+    <div class="editorial-description">
+      <p>
+       Her relationship to clothing does not operate through display. As a devoted vintage enthusiast, she approaches garments as carriers of memory and time — a private structure rather than an outward declaration. In a city still unfamiliar to them both, conversations around dress became a subtle point of alignment. Yaocheng also participated in styling, turning the act of dressing into a collaborative process rather than a unilateral construction.
+      </p>
+      <p>
+        The series situates her within the everyday spaces she inhabits — streets crossed without notice, corners briefly occupied, interiors softened by repetition. Styled yet non-performative, her presence unsettles the distinction between the ordinary and the aesthetic. Fashion here withdraws from spectacle; it does not insist on visibility, but lingers as an interior condition.
+      </p>
+    </div>
+
+    <div class="credits">
+    <p>lensed by zhaoyu wang</p>
+    <p>special thanks to yaocheng xia</p>
+  </div>
+
+  </div>
+</section>
+
+        <!-- 000 -->
+        <section class="view" id="view-zero">
+          <div class="panel">
+            <h2 class="panel-title">000</h2>
+            <p class="panel-sub">An index / archive / experiments</p>
+
+            <div class="panel-text">
+              <p>A space for notes, archive, or a minimal index of works. <br>
+              Under construction...</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="view" id="view-contact">
+          <div class="panel">
+            <h2 class="panel-title">437 660 8508</h2>
+            <p class="panel-sub">For commissions, collaborations, and editorial inquiries</p>
+
+            <div class="panel-text">
+              <p>Email: zzzhaoyuwang@outlook.com</p>
+              <p>Instagram: @rosinanterosie</p>
+            </div>
+          </div>
+        </section>
+        
+
+      </main>
+    </div>
+  </div>
+
+  <script>
+    const mainNav = document.getElementById("mainNav");
+
+const views = {
+  about: document.getElementById("view-about"),
+  // ✅ gallery 改为 doc
+  doc: document.getElementById("view-doc"),
+  // ✅ 新增 figure
+  figure: document.getElementById("view-figure"),
+  editorial: document.getElementById("view-editorial"),
+  zero: document.getElementById("view-zero"),
+  contact: document.getElementById("view-contact"),
+};
+
+function setActive(container, target) {
+  container.querySelectorAll("a").forEach(a => a.classList.remove("is-active"));
+  target.classList.add("is-active");
+}
+
+function showView(name) {
+  Object.values(views).forEach(v => v.classList.remove("is-active"));
+  views[name].classList.add("is-active");
+}
+
+mainNav.addEventListener("click", (e) => {
+  const a = e.target.closest("a[data-view]");
+  if (!a) return;
+  e.preventDefault();
+  setActive(mainNav, a);
+  showView(a.dataset.view);
+});
+// 根据 URL hash 打开对应 view
+const hash = window.location.hash.replace("#","");
+
+if (views[hash]) {
+  showView(hash);
+
+  mainNav.querySelectorAll("a").forEach(a=>{
+    a.classList.remove("is-active");
+  });
+
+  const activeLink = mainNav.querySelector(`[data-view="${hash}"]`);
+  if(activeLink) activeLink.classList.add("is-active");
+}
+  </script>
+  <div class="spiral-cursor" id="spiralCursor"></div>
+<script src="cursor.js" defer></script>
+</body>
+</html>

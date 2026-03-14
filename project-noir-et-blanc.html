@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Noir et Blanc — Zhaoyu Wang</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    .nb-page{
+      min-height: 100vh;
+      padding: 22px 26px 90px;
+      background: var(--bg);
+      color: #111;
+    }
+
+    .nb-topbar{
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 42px;
+      font-size: 13px;
+    }
+
+    .nb-back{
+      color: #111;
+      text-decoration: none;
+    }
+
+    .nb-back:hover{
+      opacity: .6;
+    }
+
+    .nb-wrap{
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .nb-intro{
+      display: grid;
+      grid-template-columns: minmax(0,1fr) 220px;
+      gap: 28px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .nb-title{
+      margin: 0;
+      font-size: clamp(28px, 5vw, 52px);
+      font-weight: normal;
+      line-height: .95;
+      letter-spacing: -0.02em;
+      color: #111;
+    }
+
+    .nb-meta{
+      font-size: 10px;
+      line-height: 1.4;
+      color: #8a8a8a;
+      text-align: right;
+    }
+
+    .nb-lead{
+      max-width: 420px;
+      margin: 0 0 52px auto;
+      font-size: 10px;
+      line-height: 1.35;
+      color: #666;
+    }
+
+    .nb-section{
+      margin-bottom: 14px;
+    }
+
+    .nb-grid-2{
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      align-items: start;
+    }
+
+    .nb-grid-hero{
+      display: grid;
+      grid-template-columns: .78fr 1.22fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .nb-grid-mix-a{
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .nb-grid-mix-b{
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      gap: 14px;
+      align-items: start;
+    }
+
+    .nb-stack{
+      display: grid;
+      gap: 14px;
+    }
+
+    .nb-card{
+      position: relative;
+      overflow: hidden;
+      background: #ececec;
+    }
+
+    .nb-card img{
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* 尺寸系统 */
+    .nb-vert-lg{ aspect-ratio: 3 / 4.25; }
+    .nb-vert-md{ aspect-ratio: 3 / 4; }
+
+    .nb-land-lg{ aspect-ratio: 16 / 9; }
+    .nb-land-md{ aspect-ratio: 4 / 3; }
+    .nb-land-sm{ aspect-ratio: 5 / 4; }
+
+    .nb-overlay{
+      position: absolute;
+      z-index: 2;
+      color: #fff;
+      font-size: 11px;
+      line-height: 1.35;
+      letter-spacing: .02em;
+      max-width: 220px;
+      text-shadow: 0 1px 8px rgba(0,0,0,.24);
+    }
+
+    .nb-overlay.title{
+      left: 18px;
+      bottom: 16px;
+      font-size: 14px;
+    }
+
+    .nb-overlay.note{
+      left: 18px;
+      top: 16px;
+      font-size: 10px;
+    }
+
+    .nb-overlay.right{
+      right: 18px;
+      bottom: 16px;
+      text-align: right;
+    }
+
+    .nb-divider{
+      height: 1px;
+      background: rgba(0,0,0,.08);
+      margin: 32px 0 18px;
+    }
+
+    .nb-end{
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: end;
+      margin-top: 36px;
+    }
+
+    .nb-credits{
+      font-size: 10px;
+      line-height: 1.4;
+      color: #7c7c7c;
+    }
+
+    .nb-credits p{
+      margin: 0;
+    }
+
+    @media (max-width: 900px){
+      .nb-intro,
+      .nb-grid-2,
+      .nb-grid-hero,
+      .nb-grid-mix-a,
+      .nb-grid-mix-b,
+      .nb-end{
+        grid-template-columns: 1fr;
+      }
+
+      .nb-meta{
+        text-align: left;
+      }
+
+      .nb-lead{
+        margin: 0 0 34px 0;
+      }
+
+      .nb-card img{
+        height: auto;
+      }
+
+      .nb-vert-lg,
+      .nb-vert-md,
+      .nb-land-lg,
+      .nb-land-md,
+      .nb-land-sm{
+        aspect-ratio: auto;
+      }
+    }
+  </style>
+</head>
+
+<body class="project-page">
+  <div class="nb-page">
+
+    <header class="nb-topbar">
+      <a class="nb-back" href="portfolio.html#doc">Doc.</a>
+      <div></div>
+    </header>
+
+    <main class="nb-wrap">
+
+      <section class="nb-intro">
+        <h1 class="nb-title">Noir et Blanc</h1>
+
+        <div class="nb-meta">
+          solitary capture<br>
+          2023-2025
+        </div>
+      </section>
+
+      <div class="nb-lead">
+       <p>&nbsp;</p>
+       <p>&nbsp;</p>
+      </div>
+
+      <!-- 1 竖图 + 2 大横图 -->
+      <section class="nb-section nb-grid-hero">
+        <div class="nb-card nb-vert-lg">
+          <img src="images/gallery/noir-et-blanc/n1.jpg" alt="Noir et Blanc image 1">
+          <div class="nb-overlay note">poem, Toronto, 2025</div>
+        </div>
+
+        <div class="nb-card nb-land-lg">
+          <img src="images/gallery/noir-et-blanc/n2.jpg" alt="Noir et Blanc image 2">
+        </div>
+      </section>
+
+      <!-- 3 + 4 横图 -->
+      <section class="nb-section nb-grid-2">
+        <div class="nb-card nb-land-md">
+          <img src="images/gallery/noir-et-blanc/n3.jpg" alt="Noir et Blanc image 3">
+        </div>
+
+        <div class="nb-card nb-land-sm">
+          <img src="images/gallery/noir-et-blanc/n4.jpg" alt="Noir et Blanc image 4">
+          <div class="nb-overlay right">the light patch, Xi'an, 2024 </div>
+        </div>
+      </section>
+
+      <!-- 5 横图 + 6 第二张竖图 -->
+      <section class="nb-section nb-grid-mix-a">
+        <div class="nb-card nb-land-lg">
+          <img src="images/gallery/noir-et-blanc/n5.jpg" alt="Noir et Blanc image 5">
+        </div>
+
+        <div class="nb-card nb-vert-md">
+          <img src="images/gallery/noir-et-blanc/n6.jpg" alt="Noir et Blanc image 6">
+          <div class="nb-overlay note">the unsetting sun, London, 2023</div>
+        </div>
+      </section>
+
+      <!-- 7 + 8 横图，不同尺寸 -->
+      <section class="nb-section nb-grid-mix-b">
+  <div class="nb-empty"></div>
+
+  <div class="nb-card nb-vert-md">
+    <img src="images/gallery/noir-et-blanc/n8.jpg" alt="Noir et Blanc image 8">
+    <div class="nb-overlay title">corner, Toronto, 2025</div>
+  </div>
+</section>
+
+      <div class="nb-divider"></div>
+
+      <footer class="nb-end">
+        <div class="nb-credits">
+          <p>ongoing</p>
+        </div>
+
+        <a class="nb-back" href="portfolio.html#doc">Back</a>
+      </footer>
+
+    </main>
+  </div>
+
+  <div class="spiral-cursor" id="spiralCursor"></div>
+  <script src="cursor.js" defer></script>
+</body>
+</html>
